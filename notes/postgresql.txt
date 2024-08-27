@@ -1,0 +1,9 @@
+postgresql
+
+pythiscisl structure
+shared memory - shared memory and semaphores
+wal buffer - the amount of shared memory used for WAL data that has not yet been written to disk
+shared buffer - the amount of memory the database server uses for shared memory buffers
+wal writer - write all unwritten xlog records into the wal segments
+wal file - file containing database changes
+
