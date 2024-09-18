@@ -1,0 +1,39 @@
+RDMS replication
+types:
+source-replication: a primary or source database replucated to a one or more secondary databases replica databases are read only
+
+- Simplest form.
+- Data is copied from a single source database to multiple target databases.
+- Ideal for disaster recovery or read-
+
+sample: The main library is the source. It has all the books. Copies of the library's catalog are sent to smaller branches (replicas). If the main library ever loses its catalog, the branches can provide a backup.
+
+source-source: each RDMS acts as both source and replica allows reads and writes on both RDMS instances conflict resolution is required when the same tables are used
+
+- Data is copied from one source database to another source database.
+- Often used for load balancing or geographic distribution.
+
+sample: The main library sends its catalog to another main library. This might be useful for sharing resources between two large libraries in different cities.
+
+peer-peer: all nodes on the network ar peers reads and writes are written to all nodes conflict resolution is resolution
+
+- Multiple databases can both send and receive data.
+- Useful for decentralized systems or applications that require high availability.
+
+sample: Each library can send and receive books and catalog information from other libraries. This is like a network of libraries that share resources.
+
+snapshot replication: a snapsjot of the sorce databse is copied to the replica database. this form of replication is not intended as real time replication solution
+
+- A complete copy of the source database is taken at a specific point in time.
+- Suitable for initial data transfer or infrequent updates.
+- Can be slow for large databases.
+
+sample: The entire library catalog is copied at a specific time and sent to another location. This is like taking a photo of the shelves. It's a good way to get a complete picture of the library's contents at a particular moment, but it doesn't show any changes that happen afterward.
+
+transactional replication: transaction realtime data changes are copied from the source to the replica used for high availability and up to date data across multiple databases
+
+- Individual transactions are captured and applied to the target database.
+- Ensures real-time data consistency.
+- Ideal for high-volume, mission-critical applications.
+
+sample: Every time a book is borrowed or returned, the change is recorded in the catalog. This information is then sent to other libraries, so they can update their catalogs accordingly. This is like real-time updates on the library's inventory.
